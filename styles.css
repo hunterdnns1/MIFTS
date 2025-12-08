@@ -161,3 +161,19 @@ ul li {
   to {opacity: 1; transform: translateY(0);}
 }
 
+
+.about-images {
+  display: flex;
+  justify-content: center; /* centers the images horizontally */
+  gap: 20px;               /* space between images */
+  margin-top: 30px;        /* space above the images */
+  flex-wrap: wrap;          /* allows wrapping on small screens */
+}
+
+.about-images img {
+  max-width: 300px;        /* adjust size as needed */
+  width: 100%;             /* responsive */
+  border-radius: 8px;      /* optional: rounded corners */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* optional shadow */
+}
+
