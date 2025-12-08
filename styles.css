@@ -41,13 +41,19 @@ nav a:hover {
 }
 
 /* HERO SECTION */
+
 .hero {
-  text-align: center;
-  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* aligns content at the top */
+  align-items: center;
+  height: 400px; /* or adjust to your preference */
+  padding-top: 20px; /* space from top */
   background: url('images/hero.jpg') center/cover no-repeat;
   color: white;
   text-shadow: 1px 1px 5px #000;
 }
+
 
 .hero h1 {
   font-size: 3em;
