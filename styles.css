@@ -60,7 +60,6 @@ nav a:hover {
   color: white;
   text-align: center;
   text-shadow: 1px 1px 5px #000;
-  animation: fadeIn 1.5s ease-in-out;
 }
 
 .hero h1 {
@@ -83,31 +82,33 @@ nav a:hover {
   background-color: #6fa3ef;
 }
 
-/* INTRO SECTION (Welcome Anglers + About Text) */
+/* INTRO / CONTENT BOXES (About, Schedule, etc.) */
 .intro,
 .content-box {
-  padding: 40px 20px;
+  padding: 40px 40px;
   max-width: 900px;
   margin: 40px auto;
-  text-align: left;
   background: rgba(255, 255, 255, 0.8);
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-}
-
-.intro h2,
-.content-box h1,
-.content-box h2 {
   text-align: center;
 }
 
-/* LISTS */
-ul {
-  padding-left: 25px;
+.intro p,
+.content-box p {
+  margin-bottom: 20px;
 }
 
-ul li {
-  margin-bottom: 10px;
+.content-box ul {
+  padding-left: 20px;       /* bullet indent inside box */
+  margin: 0 auto 20px auto; /* centers box horizontally */
+  text-align: left;         /* keep bullets readable */
+  list-style-position: inside;
+}
+
+.content-box h1,
+.content-box h2 {
+  margin-bottom: 20px;
 }
 
 /* ABOUT PAGE IMAGES */
@@ -144,59 +145,6 @@ ul li {
   nav {
     flex-direction: column;
   }
-}
-
-/* FADE IN ANIMATIONS */
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-
-/* CONTENT BOX (for pages like Schedule, Rules, etc.) */
-.content-box {
-  padding: 40px 20px;
-  max-width: 900px;
-  margin: 40px auto;
-  background: rgba(255, 255, 255, 0.8);
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-}
-
-.content-box h1,
-.content-box h2 {
-  text-align: center;
-}
-
-.content-box p,
-.content-box ul {
-  text-align: left;
-}
-
-.content-box {
-  padding: 40px 40px; /* extra padding on sides */
-  max-width: 900px;
-  margin: 40px auto; /* centers the box */
-  background: rgba(255, 255, 255, 0.8);
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-}
-
-.content-box h1,
-.content-box h2 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.content-box p {
-  text-align: center; /* optional: center paragraphs */
-  margin-bottom: 20px;
-}
-
-.content-box ul {
-  padding-left: 20px;   /* indent the bullets inside the box */
-  margin-left: 0;       /* remove default extra margin */
-  list-style-position: inside; /* bullets inside the box */
 }
 
 
