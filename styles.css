@@ -195,3 +195,12 @@ nav a:hover {
   to {opacity: 1; transform: translateY(0);}
 }
 
+/* Ensure lists inside content-box have proper padding */
+.content-box ul {
+  padding-left: 40px;   /* more space from left edge */
+  margin: 10px 0;       /* spacing above and below */
+}
+
+.content-box ul li {
+  margin-bottom: 8px;   /* spacing between bullets */
+}
