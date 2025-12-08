@@ -6,84 +6,12 @@
   <title>Registration – Michigan Ice Fishing Tournament Series</title>
   <link rel="stylesheet" href="styles.css">
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center; /* center headings and content */
-      margin: 0;
-      padding: 20px;
-      background-color: #f0f4f8;
-      color: #222;
-    }
-
-    header, nav {
-      text-align: center;
-    }
-
-    nav a {
-      margin: 0 10px;
-      text-decoration: none;
-      color: #222;
-      font-weight: bold;
-    }
-
-    .content-box {
+    /* Optional: make iframe responsive */
+    .content-box iframe {
+      width: 100%;
       max-width: 700px;
-      margin: 0 auto;
-      text-align: center;
-    }
-
-    h1, h2 {
-      margin-bottom: 15px;
-    }
-
-    p {
-      margin-bottom: 20px;
-    }
-
-    /* Centered bulleted list */
-    .content-box ul {
-      list-style-position: outside;
-      padding-left: 0;
-      display: inline-block;
-      text-align: left;
-      margin: 0 auto 30px auto;
-    }
-
-    .content-box ul li {
-      margin-bottom: 10px;
-    }
-
-    /* Center form elements */
-    form {
-      display: inline-block;
-      text-align: left; /* labels and inputs align left inside the form */
-      width: 100%;
-      max-width: 500px;
-    }
-
-    form label {
-      display: block;
-      margin-bottom: 5px;
-      font-weight: bold;
-    }
-
-    form input, form select, form button {
-      width: 100%;
-      padding: 8px;
-      margin-bottom: 15px;
-      box-sizing: border-box;
-    }
-
-    form button {
-      background-color: #007bff;
-      color: #fff;
+      height: 1100px; /* adjust as needed */
       border: none;
-      cursor: pointer;
-      font-size: 1em;
-    }
-
-    form button:hover {
-      background-color: #0056b3;
     }
   </style>
 </head>
@@ -109,50 +37,16 @@
   <main>
     <div class="content-box">
       <h1>Register for the 2025 Tournament Series</h1>
-      <p>Secure your spot in Michigan’s premier ice fishing tournament! Complete the registration form below and submit payment to finalize your entry.</p>
+      <p>Secure your spot — fill out the form below. Payment will be cash at the event.</p>
 
-      <!-- Registration Instructions -->
-      <h2>How to Register</h2>
-      <ul>
-        <li>Fill out your team and contact information completely.</li>
-        <li>Select the qualifying events you wish to enter.</li>
-        <li>Submit your payment via PayPal or other accepted methods.</li>
-        <li>Once payment is received, you will receive a confirmation email with your registration details.</li>
-      </ul>
-
-      <!-- Registration Form -->
-      <form action="#" method="POST">
-        <label for="team-name">Team Name:</label>
-        <input type="text" id="team-name" name="team-name" required>
-
-        <label for="angler1">Angler 1 Name:</label>
-        <input type="text" id="angler1" name="angler1" required>
-
-        <label for="angler2">Angler 2 Name:</label>
-        <input type="text" id="angler2" name="angler2">
-
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="phone">Phone Number:</label>
-        <input type="tel" id="phone" name="phone">
-
-        <label for="events">Select Events:</label>
-        <select id="events" name="events" multiple required>
-          <option value="north">North Region Qualifier</option>
-          <option value="central">Central Region Qualifier</option>
-          <option value="south">South Region Qualifier</option>
-          <option value="state">State Championship</option>
-        </select>
-
-        <p><strong>Payment:</strong> Use the button below to submit your registration fee.</p>
-        <button type="submit" class="btn">Pay & Register</button>
-      </form>
+      <!-- Embedded Google Form -->
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfgO8iCj4umsRkC8i9YSEi4khCgXqeQ7fS9HF1Qv5W4j5ipPA/viewform?embedded=true"></iframe>
     </div>
   </main>
 
 </body>
 </html>
+
 
 
 
