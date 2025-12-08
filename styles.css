@@ -173,4 +173,31 @@ ul li {
   text-align: left;
 }
 
+.content-box {
+  padding: 40px 40px; /* extra padding on sides */
+  max-width: 900px;
+  margin: 40px auto; /* centers the box */
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.content-box h1,
+.content-box h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.content-box p {
+  text-align: center; /* optional: center paragraphs */
+  margin-bottom: 20px;
+}
+
+.content-box ul {
+  padding-left: 20px;   /* indent the bullets inside the box */
+  margin-left: 0;       /* remove default extra margin */
+  list-style-position: inside; /* bullets inside the box */
+}
+
+
 
