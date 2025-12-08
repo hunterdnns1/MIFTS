@@ -177,3 +177,19 @@ ul li {
   box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* optional shadow */
 }
 
+.about-images {
+  display: flex;
+  justify-content: center; /* centers the images */
+  gap: 20px;               /* space between images */
+  flex-wrap: wrap;         /* stacks images on smaller screens */
+  margin-top: 30px;        /* spacing above images */
+}
+
+.about-images img {
+  max-width: 300px;        /* adjust for desired size */
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+
