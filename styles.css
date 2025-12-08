@@ -164,4 +164,31 @@ nav a:hover {
 }
 
 
+/* Content Box Styling (for Schedule, Results, etc.) */
+.content-box {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: 40px auto;      /* centers the box on the page */
+  background: rgba(255, 255, 255, 0.85); /* subtle icy card */
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Headings inside content-box */
+.content-box h1, 
+.content-box h2 {
+  color: #03396c;
+  text-align: center;   /* optional: center headings */
+}
+
+/* Lists inside content-box */
+.content-box ul {
+  padding-left: 40px;   /* adds left padding so bullets are not stuck to edge */
+  margin-bottom: 20px;  /* space below each list */
+}
+
+.content-box ul li {
+  margin-bottom: 10px;  /* space between list items */
+  line-height: 1.4em;   /* improves readability */
+}
 
