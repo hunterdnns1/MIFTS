@@ -8,7 +8,7 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      text-align: center; /* center all headings and content */
+      text-align: center; /* center headings and content */
       margin: 0;
       padding: 20px;
       background-color: #f0f4f8;
@@ -39,27 +39,17 @@
       margin-bottom: 30px;
     }
 
-    /* Centered bullets */
+    /* Centered normal bulleted lists */
     .content-box ul {
-      list-style: none;  /* remove default bullets */
-      padding: 0;
-      margin: 0 auto 30px auto;
+      list-style-position: outside; /* normal bullets */
+      padding-left: 0;              /* remove default padding */
+      display: inline-block;         /* allows centering the list */
+      text-align: left;              /* keep bullet with text on same line */
+      margin: 0 auto 30px auto;      /* center the list block */
     }
 
     .content-box ul li {
-      margin-bottom: 10px;
-      display: inline-block; /* allows centering */
-      text-align: center;
-      position: relative;
-      padding-left: 0;
-    }
-
-    .content-box ul li::before {
-      content: "•";
-      display: block;
-      font-size: 1.2em;
-      margin-bottom: 5px;
-      color: #222;
+      margin-bottom: 10px;          /* spacing between bullets */
     }
   </style>
 </head>
@@ -126,6 +116,5 @@
 
 </body>
 </html>
-
 
 
