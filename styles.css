@@ -1,5 +1,6 @@
 /* ========================================
-   MIFTS FULL CSS — Unified Page Styling
+   MIFTS FULL CSS
+   Unified styling for all pages
 ======================================== */
 
 /* GENERAL STYLES */
@@ -11,7 +12,6 @@ body {
   padding: 0;
 }
 
-/* HEADER */
 header {
   background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(6px);
@@ -49,22 +49,27 @@ nav a:hover {
 .hero {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  height: 70vh;
-  min-height: 400px;
-  max-height: 700px;
-  padding: 20px 20px;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
-              url('images/hero.jpg') center/cover no-repeat;
+  justify-content: space-between; /* button at bottom */
+  align-items: center;            /* center horizontally */
+  height: 70vh;                   
+  min-height: 400px;              
+  max-height: 700px;              
+  padding: 20px 20px;             
+  background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('images/hero.jpg') center/cover no-repeat;
   color: white;
-  text-align: center;
   text-shadow: 1px 1px 5px #000;
+  text-align: center;
+  animation: fadeIn 1.5s ease-in-out;
 }
 
 .hero h1 {
   font-size: 3em;
   margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.5em;
+  margin-bottom: 20px;
 }
 
 .btn {
@@ -76,39 +81,55 @@ nav a:hover {
   font-weight: bold;
   border-radius: 6px;
   transition: background 0.3s;
+  animation: fadeInBtn 2s ease-in-out;
 }
 
 .btn:hover {
   background-color: #6fa3ef;
 }
 
-/* INTRO / CONTENT BOXES (About, Schedule, etc.) */
-.intro,
-.content-box {
-  padding: 40px 40px;
+/* WELCOME / INTRO SECTION */
+.intro {
+  padding: 40px 20px;
   max-width: 900px;
   margin: 40px auto;
+  text-align: center;
   background: rgba(255, 255, 255, 0.8);
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-.intro p,
-.content-box p {
-  margin-bottom: 20px;
-}
-
-.content-box ul {
-  padding-left: 20px;       /* bullet indent inside box */
-  margin: 0 auto 20px auto; /* centers box horizontally */
-  text-align: left;         /* keep bullets readable */
-  list-style-position: inside;
+/* CONTENT BOX - For Schedule, Results, About, Rules, Sponsors */
+.content-box {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: 40px auto;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 .content-box h1,
 .content-box h2 {
+  color: #03396c;
+  text-align: center;
   margin-bottom: 20px;
+}
+
+.content-box p {
+  margin-bottom: 20px;
+  line-height: 1.5em;
+}
+
+/* Lists inside content-box */
+.content-box ul {
+  padding-left: 40px;
+  margin-bottom: 20px;
+}
+
+.content-box ul li {
+  margin-bottom: 10px;
+  line-height: 1.4em;
 }
 
 /* ABOUT PAGE IMAGES */
@@ -116,38 +137,18 @@ nav a:hover {
   display: flex;
   justify-content: center;
   gap: 20px;
-  margin-top: 30px;
   flex-wrap: wrap;
+  margin-top: 30px;
 }
 
 .about-images img {
   max-width: 300px;
   width: 100%;
   border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.12);
-  cursor: pointer;
-  transition: transform 0.2s;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-.about-images img:hover {
-  transform: scale(1.05);
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .hero {
-    height: 60vh;
-    padding: 15px 10px;
-  }
-  .hero h1 {
-    font-size: 2em;
-  }
-  nav {
-    flex-direction: column;
-  }
-}
-
-
+/* SPONSORS LOGOS */
 .sponsor-logos {
   display: flex;
   justify-content: center;
@@ -163,32 +164,34 @@ nav a:hover {
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-
-/* Content Box Styling (for Schedule, Results, etc.) */
-.content-box {
-  padding: 40px 20px;
-  max-width: 900px;
-  margin: 40px auto;      /* centers the box on the page */
-  background: rgba(255, 255, 255, 0.85); /* subtle icy card */
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+/* RESPONSIVE STYLING */
+@media (max-width: 768px) {
+  .hero {
+    height: 60vh;                 
+    padding: 15px 10px;
+  }
+  .hero h1 {
+    font-size: 2em;
+  }
+  .hero p {
+    font-size: 1.1em;
+  }
+  .btn {
+    padding: 10px 20px;
+  }
+  nav {
+    flex-direction: column;
+  }
+}
+  
+/* HERO ANIMATIONS */
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
 }
 
-/* Headings inside content-box */
-.content-box h1, 
-.content-box h2 {
-  color: #03396c;
-  text-align: center;   /* optional: center headings */
-}
-
-/* Lists inside content-box */
-.content-box ul {
-  padding-left: 40px;   /* adds left padding so bullets are not stuck to edge */
-  margin-bottom: 20px;  /* space below each list */
-}
-
-.content-box ul li {
-  margin-bottom: 10px;  /* space between list items */
-  line-height: 1.4em;   /* improves readability */
+@keyframes fadeInBtn {
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translateY(0);}
 }
 
