@@ -41,19 +41,38 @@ nav a:hover {
 }
 
 /* HERO SECTION */
+
 .hero {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* positions content near top */
-  align-items: center;         /* centers content horizontally */
-  height: 400px;               /* adjust to fit your image */
-  padding-top: 20px;           /* space from top */
+  justify-content: space-between; /* push button to bottom */
+  align-items: center;            /* center horizontally */
+  height: 70vh;                   /* 70% of viewport height, adjusts to screen */
+  min-height: 400px;              /* ensure it’s tall enough on desktop */
+  max-height: 700px;              /* prevent overly tall hero on large screens */
+  padding: 20px 20px;             /* top and bottom padding */
   background: url('images/hero.jpg') center/cover no-repeat;
   color: white;
   text-shadow: 1px 1px 5px #000;
-  text-align: center;          /* centers text inside h1, p */
+  text-align: center;             /* center text inside heading/paragraph */
 }
 
+/* Optional: smaller adjustments for mobile */
+@media (max-width: 768px) {
+  .hero {
+    height: 60vh;                 /* slightly shorter on small screens */
+    padding: 15px 10px;
+  }
+  .hero h1 {
+    font-size: 2em;
+  }
+  .hero p {
+    font-size: 1.1em;
+  }
+  .btn {
+    padding: 10px 20px;
+  }
+}
 
 
 .hero h1 {
