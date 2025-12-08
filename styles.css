@@ -1,7 +1,5 @@
 /* ========================================
-   MIFTS FULL CSS
-   Homepage enhancements: hero overlay,
-   fade-in animation, welcome section, logo
+   MIFTS FULL CSS — Unified Page Styling
 ======================================== */
 
 /* GENERAL STYLES */
@@ -13,6 +11,7 @@ body {
   padding: 0;
 }
 
+/* HEADER */
 header {
   background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(6px);
@@ -50,31 +49,23 @@ nav a:hover {
 .hero {
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* button at bottom */
-  align-items: center;            /* center horizontally */
-  height: 70vh;                   
-  min-height: 400px;              
-  max-height: 700px;              
-  padding: 20px 20px;             
-  background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('images/hero.jpg') center/cover no-repeat;
+  justify-content: space-between;
+  align-items: center;
+  height: 70vh;
+  min-height: 400px;
+  max-height: 700px;
+  padding: 20px 20px;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+              url('images/hero.jpg') center/cover no-repeat;
   color: white;
-  text-shadow: 1px 1px 5px #000;
   text-align: center;
-  animation: fadeIn 1.5s ease-in-out; /* fade-in on page load */
-}
-
-.hero-text {
-  animation: fadeInText 1.5s ease-in-out;
+  text-shadow: 1px 1px 5px #000;
+  animation: fadeIn 1.5s ease-in-out;
 }
 
 .hero h1 {
   font-size: 3em;
   margin-bottom: 15px;
-}
-
-.hero p {
-  font-size: 1.5em;
-  margin-bottom: 20px;
 }
 
 .btn {
@@ -86,110 +77,78 @@ nav a:hover {
   font-weight: bold;
   border-radius: 6px;
   transition: background 0.3s;
-  animation: fadeInBtn 2s ease-in-out;
 }
 
 .btn:hover {
   background-color: #6fa3ef;
 }
 
-/* WELCOME ANGLERS / INTRO SECTION */
-.intro {
+/* INTRO SECTION (Welcome Anglers + About Text) */
+.intro,
+.content-box {
   padding: 40px 20px;
   max-width: 900px;
   margin: 40px auto;
-  text-align: center;
-  background: rgba(255, 255, 255, 0.8); /* subtle icy card */
+  text-align: left;
+  background: rgba(255, 255, 255, 0.8);
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
-/* SECTION STYLES */
-section {
-  padding: 40px 20px;
-  max-width: 900px;
-  margin: auto;
+.intro h2,
+.content-box h1,
+.content-box h2 {
+  text-align: center;
 }
 
-section h1, section h2 {
-  color: #03396c;
-}
-
+/* LISTS */
 ul {
-  padding-left: 20px;
+  padding-left: 25px;
 }
 
 ul li {
   margin-bottom: 10px;
 }
 
+/* ABOUT PAGE IMAGES */
+.about-images {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.about-images img {
+  max-width: 300px;
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.about-images img:hover {
+  transform: scale(1.05);
+}
+
 /* RESPONSIVE */
 @media (max-width: 768px) {
   .hero {
-    height: 60vh;                 
+    height: 60vh;
     padding: 15px 10px;
   }
   .hero h1 {
     font-size: 2em;
-  }
-  .hero p {
-    font-size: 1.1em;
-  }
-  .btn {
-    padding: 10px 20px;
   }
   nav {
     flex-direction: column;
   }
 }
 
-/* ========================================
-   HERO FADE-IN ANIMATIONS
-======================================== */
+/* FADE IN ANIMATIONS */
 @keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity: 1;}
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
-
-@keyframes fadeInText {
-  from {opacity: 0; transform: translateY(-20px);}
-  to {opacity: 1; transform: translateY(0);}
-}
-
-@keyframes fadeInBtn {
-  from {opacity: 0; transform: translateY(20px);}
-  to {opacity: 1; transform: translateY(0);}
-}
-
-
-.about-images {
-  display: flex;
-  justify-content: center; /* centers the images horizontally */
-  gap: 20px;               /* space between images */
-  margin-top: 30px;        /* space above the images */
-  flex-wrap: wrap;          /* allows wrapping on small screens */
-}
-
-.about-images img {
-  max-width: 300px;        /* adjust size as needed */
-  width: 100%;             /* responsive */
-  border-radius: 8px;      /* optional: rounded corners */
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* optional shadow */
-}
-
-.about-images {
-  display: flex;
-  justify-content: center; /* centers the images */
-  gap: 20px;               /* space between images */
-  flex-wrap: wrap;         /* stacks images on smaller screens */
-  margin-top: 30px;        /* spacing above images */
-}
-
-.about-images img {
-  max-width: 300px;        /* adjust for desired size */
-  width: 100%;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
 
