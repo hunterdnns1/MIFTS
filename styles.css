@@ -1,3 +1,9 @@
+/* ========================================
+   MIFTS FULL CSS
+   Homepage enhancements: hero overlay,
+   fade-in animation, welcome section, logo
+======================================== */
+
 /* GENERAL STYLES */
 body {
   font-family: Arial, sans-serif;
@@ -41,39 +47,25 @@ nav a:hover {
 }
 
 /* HERO SECTION */
-
 .hero {
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* push button to bottom */
+  justify-content: space-between; /* button at bottom */
   align-items: center;            /* center horizontally */
-  height: 70vh;                   /* 70% of viewport height, adjusts to screen */
-  min-height: 400px;              /* ensure it’s tall enough on desktop */
-  max-height: 700px;              /* prevent overly tall hero on large screens */
-  padding: 20px 20px;             /* top and bottom padding */
-  background: url('images/hero.jpg') center/cover no-repeat;
+  height: 70vh;                   
+  min-height: 400px;              
+  max-height: 700px;              
+  padding: 20px 20px;             
+  background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('images/hero.jpg') center/cover no-repeat;
   color: white;
   text-shadow: 1px 1px 5px #000;
-  text-align: center;             /* center text inside heading/paragraph */
+  text-align: center;
+  animation: fadeIn 1.5s ease-in-out; /* fade-in on page load */
 }
 
-/* Optional: smaller adjustments for mobile */
-@media (max-width: 768px) {
-  .hero {
-    height: 60vh;                 /* slightly shorter on small screens */
-    padding: 15px 10px;
-  }
-  .hero h1 {
-    font-size: 2em;
-  }
-  .hero p {
-    font-size: 1.1em;
-  }
-  .btn {
-    padding: 10px 20px;
-  }
+.hero-text {
+  animation: fadeInText 1.5s ease-in-out;
 }
-
 
 .hero h1 {
   font-size: 3em;
@@ -94,10 +86,22 @@ nav a:hover {
   font-weight: bold;
   border-radius: 6px;
   transition: background 0.3s;
+  animation: fadeInBtn 2s ease-in-out;
 }
 
 .btn:hover {
   background-color: #6fa3ef;
+}
+
+/* WELCOME ANGLERS / INTRO SECTION */
+.intro {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: 40px auto;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.8); /* subtle icy card */
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 /* SECTION STYLES */
@@ -121,13 +125,39 @@ ul li {
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
+  .hero {
+    height: 60vh;                 
+    padding: 15px 10px;
+  }
   .hero h1 {
     font-size: 2em;
   }
   .hero p {
-    font-size: 1.2em;
+    font-size: 1.1em;
+  }
+  .btn {
+    padding: 10px 20px;
   }
   nav {
     flex-direction: column;
   }
 }
+
+/* ========================================
+   HERO FADE-IN ANIMATIONS
+======================================== */
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeInText {
+  from {opacity: 0; transform: translateY(-20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes fadeInBtn {
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
