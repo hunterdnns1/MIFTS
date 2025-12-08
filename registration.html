@@ -5,6 +5,87 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Registration – Michigan Ice Fishing Tournament Series</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center; /* center headings and content */
+      margin: 0;
+      padding: 20px;
+      background-color: #f0f4f8;
+      color: #222;
+    }
+
+    header, nav {
+      text-align: center;
+    }
+
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #222;
+      font-weight: bold;
+    }
+
+    .content-box {
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    h1, h2 {
+      margin-bottom: 15px;
+    }
+
+    p {
+      margin-bottom: 20px;
+    }
+
+    /* Centered bulleted list */
+    .content-box ul {
+      list-style-position: outside;
+      padding-left: 0;
+      display: inline-block;
+      text-align: left;
+      margin: 0 auto 30px auto;
+    }
+
+    .content-box ul li {
+      margin-bottom: 10px;
+    }
+
+    /* Center form elements */
+    form {
+      display: inline-block;
+      text-align: left; /* labels and inputs align left inside the form */
+      width: 100%;
+      max-width: 500px;
+    }
+
+    form label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    form input, form select, form button {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 15px;
+      box-sizing: border-box;
+    }
+
+    form button {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      font-size: 1em;
+    }
+
+    form button:hover {
+      background-color: #0056b3;
+    }
+  </style>
 </head>
 <body>
 
@@ -39,39 +120,39 @@
         <li>Once payment is received, you will receive a confirmation email with your registration details.</li>
       </ul>
 
-      <!-- Example Form (replace with actual PayPal / payment integration) -->
+      <!-- Registration Form -->
       <form action="#" method="POST">
-        <label for="team-name">Team Name:</label><br>
-        <input type="text" id="team-name" name="team-name" required><br><br>
+        <label for="team-name">Team Name:</label>
+        <input type="text" id="team-name" name="team-name" required>
 
-        <label for="angler1">Angler 1 Name:</label><br>
-        <input type="text" id="angler1" name="angler1" required><br><br>
+        <label for="angler1">Angler 1 Name:</label>
+        <input type="text" id="angler1" name="angler1" required>
 
-        <label for="angler2">Angler 2 Name:</label><br>
-        <input type="text" id="angler2" name="angler2"><br><br>
+        <label for="angler2">Angler 2 Name:</label>
+        <input type="text" id="angler2" name="angler2">
 
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email" required><br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
 
-        <label for="phone">Phone Number:</label><br>
-        <input type="tel" id="phone" name="phone"><br><br>
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone">
 
-        <label for="events">Select Events:</label><br>
+        <label for="events">Select Events:</label>
         <select id="events" name="events" multiple required>
           <option value="north">North Region Qualifier</option>
           <option value="central">Central Region Qualifier</option>
           <option value="south">South Region Qualifier</option>
           <option value="state">State Championship</option>
-        </select><br><br>
+        </select>
 
         <p><strong>Payment:</strong> Use the button below to submit your registration fee.</p>
         <button type="submit" class="btn">Pay & Register</button>
       </form>
-
     </div>
   </main>
 
 </body>
 </html>
+
 
 
